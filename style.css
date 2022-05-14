@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Carrois Gothic', Verdana, Tahoma, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #e4f2fe;
+    background-color: #303072;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Carrois Gothic SC', 'Carrois Gothic', Verdana, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #e3b7c2;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #e3b7c2;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #303072;
+}
+
+a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 3px #303072;
+}
+
+header {
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+    background-image: linear-gradient(to right, rgba(48, 48, 114, 0), rgba(48, 48, 114, 1)), url("./resources/texture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    float: right;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+nav li {
+    display: inline;
+    margin-left: 1rem;
+}
+
+.logo {
+    width: 250px;
+    float: left;
+    margin: 1rem 1.5rem;
+}
+
+.container {
+    display: inline-block;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.column {
+    max-width: 30%;
+    width: fit-content;
+    margin: 0px 10px;
+}
+
+.callout {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.headshot {
+    width: 150px;
+    height: auto;
+    opacity: 90%;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    opacity: 90%;
+    float: left;
+    margin-right: 10px;
+}
+
+#about-section .column {
+    max-width: 60%;
+}
+
+#contact-section h3 {
+    color: #e3b7c2;
+}
+
+#contact-section .headshot {
+    border-radius: 10px;
+}
+
+#contact-section .callout {
+    width: 100%;
+    padding-bottom: 2rem;
+    display: inline-block;
+    align-self: center;
+}
+
+#projects-section {
+    background-image: linear-gradient(rgba(48, 48, 114, 1), rgba(48, 48, 114, 0)), url("./resources/texture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 2rem;
+}
+
+#projects-section img {
+    width: 120px;
+    height: 120px;
+}
+
+#projects-section h3 {
+    color: #303072;
+    font-weight: bold;
+    font-size: 1.5rem;
+    align-self: center;
+}
+
+button {
+    background-color: #e4f2fe;
+    width: 200px;
+    height: 120px;
+    border: none;
+}
+
+#projects-section p {
+    color: #303072;
+    padding: .75rem;
+    background-color: #e4f2fe;
+    width: 240px;
+    height: fit-content;
+    border: #5790b1 solid 9px;
+}
+
+#skills-section {
+    justify-content: space-around;
+}
+
+footer {
+    background-image: linear-gradient(to right, rgba(48, 48, 114, 0), rgba(48, 48, 114, 1)), url("./resources/texture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 70px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #303072;
+    margin-top: 2rem;
+}
+
+footer ul {
+    float: right;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+
+footer li {
+    display: inline;
+    margin-right: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    #projects-section .container {
+        display: inline-flex;
+        flex-flow: row wrap;
+    }
+    #projects-section .column {
+        display: inline-block;
+        max-width: 50%;
+      }
+    .callout {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .logo {
+        margin: .5rem 1rem;
+    }
+    nav ul {
+        margin-top: .25rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+    #about-section .headshot{
+        padding: 2rem 0rem;
+    }
+    .column {
+        display: block;
+        max-width: 100%;
+    }
+    #projects-section .container {
+        display: inline-flex;
+        flex-flow: row wrap;
+    }
+    #projects-section .column {
+        display: inline-block;
+        max-width: 100%;
+      }
+    #skills-section .container, #contact-section .container {
+        display: inline-flex;
+        flex-flow: column wrap;
+        align-self: center;
+    }
+    #skills-section .column, #contact-section .column {
+        align-self: flex-start;
+        padding: 0rem 2.5rem;
+    }
+    .callout {
+        padding-bottom: 1rem;
+    }
+}
